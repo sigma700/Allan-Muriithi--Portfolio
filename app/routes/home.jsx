@@ -290,28 +290,35 @@ export default function Home() {
     {
       title: "Protiba",
       image: "/Screenshot 2025-09-20 203806.png",
-      tags: ["REACT", "Javascript", "NodeJs", "TAILWIND CSS", "Framer-motion"],
+      tags: [
+        "REACT",
+        "Javascript",
+        "NodeJs",
+        "TAILWIND CSS",
+        "Framer-motion",
+        "Postman",
+      ],
       link: "https://protiba.onrender.com/",
       desc: "AI-powered school timetable generator SaaS",
     },
     {
       title: "BrewHaven",
       image: "/Screenshot 2025-10-22 223907.png",
-      tags: ["ReactJs", "TAILWIND CSS", "Framer-motion"],
+      tags: ["ReactJs", "TAILWIND CSS", "Framer-motion", "AWS", "Squoosh"],
       link: "https://brewhaven-qea1.onrender.com/",
       desc: "Coffee e-commerce platform with payment integration",
     },
     {
       title: "EduFind",
       image: "/Screenshot 2025-09-20 204543.png",
-      tags: ["REACT", "TAILWIND CSS", "Framer-motion"],
+      tags: ["REACT", "TAILWIND CSS", "Framer-motion", "NodeJs", "ExpressJs"],
       link: "https://edufind-ryn2.onrender.com/",
       desc: "Educational institution discovery platform",
     },
     {
       title: "MACISTA LIMITED",
       image: "/Screenshot 2025-09-20 203520.png",
-      tags: ["REACT", "Javascript", "EXPRESS Js"],
+      tags: ["REACT", "Javascript", "EXPRESS Js", ""],
       link: "https://www.macista.co.ke/",
       desc: "Full corporate website for a Kenyan enterprise",
     },
@@ -706,7 +713,7 @@ export default function Home() {
               </div>
 
               <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
-                I design and build stunning, high-performance web applications —
+                I design and build stunning, high-performance web applications ,
                 transforming wireframes into clean, logical, and beautiful code
                 that drives real business outcomes.
               </p>
@@ -810,7 +817,7 @@ export default function Home() {
             <SectionTitle
               label="About Me"
               title="The Developer Behind the Code"
-              subtitle="Passionate engineer combining mechanical rigour with modern web mastery to build solutions that matter"
+              subtitle="Passionate engineer combining mechanical engineering knowledge with modern web mastery to build solutions that matter"
             />
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -1427,7 +1434,7 @@ export default function Home() {
             <div className="flex justify-center">
               {/* CV Download */}
               <motion.a
-                href="/ALLAN_KIRIMI.pdf"
+                href="public/ALLAN KIRIMI.pdf"
                 download="Allan_Muriiithi_CV.pdf"
                 initial={{opacity: 0, y: 30}}
                 whileInView={{opacity: 1, y: 0}}
