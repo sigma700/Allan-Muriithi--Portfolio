@@ -117,7 +117,6 @@ const LinkBox = ({Icon, href}) => {
 
   const handleMouseEnter = (e) => {
     const side = getNearestSide(e);
-
     animate(scope.current, {
       clipPath: ENTRANCE_KEYFRAMES[side],
     });
@@ -125,7 +124,6 @@ const LinkBox = ({Icon, href}) => {
 
   const handleMouseLeave = (e) => {
     const side = getNearestSide(e);
-
     animate(scope.current, {
       clipPath: EXIT_KEYFRAMES[side],
     });
@@ -135,15 +133,11 @@ const LinkBox = ({Icon, href}) => {
     <a
       target="blank"
       href={href}
-      onMouseEnter={(e) => {
-        handleMouseEnter(e);
-      }}
-      onMouseLeave={(e) => {
-        handleMouseLeave(e);
-      }}
-      className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36 lg:h-44 xl:h-52"
     >
-      <Icon className="text-xl sm:text-3xl lg:text-4xl" />
+      <Icon className="text-xl sm:text-3xl lg:text-4xl xl:text-5xl" />
 
       <div
         ref={scope}
@@ -152,7 +146,7 @@ const LinkBox = ({Icon, href}) => {
         }}
         className="absolute inset-0 grid place-content-center bg-green-400 text-black"
       >
-        <Icon className="text-xl sm:text-3xl md:text-4xl" />
+        <Icon className="text-xl sm:text-3xl md:text-4xl xl:text-5xl" />
       </div>
     </a>
   );

@@ -642,7 +642,7 @@ export default function Home() {
                   color: "#84cc16",
                 }}
               >
-                🟢 Available for work
+                Available for work
               </motion.div>
 
               <motion.div
@@ -657,7 +657,7 @@ export default function Home() {
                   color: "#d1d5db",
                 }}
               >
-                📍 Nairobi, Kenya
+                Nairobi, Kenya
               </motion.div>
             </motion.div>
 
@@ -1000,7 +1000,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  Where technology meets passion — I'm fascinated by automotive
+                  Where technology meets passion . I'm fascinated by automotive
                   innovation, motorsport engineering, and the stories
                   documentaries tell.
                 </p>
@@ -1204,7 +1204,7 @@ export default function Home() {
                 {
                   icon: "/palette.svg",
                   title: "UI / UX Design",
-                  desc: "Pixel-perfect interfaces that convert — I craft visually stunning designs that balance beauty with usability.",
+                  desc: "Pixel-perfect interfaces that convert . I craft visually stunning designs that balance beauty with usability.",
                   color: "rgba(132,204,22,0.15)",
                   border: "rgba(132,204,22,0.2)",
                   key: "project1",
@@ -1212,7 +1212,7 @@ export default function Home() {
                 {
                   icon: "/laptop-minimal.svg",
                   title: "Web Development",
-                  desc: "I hard-code websites according to client specifications — clean, fast, and scalable code every time.",
+                  desc: "I hard-code websites according to client specifications, clean, fast, and scalable code every time.",
                   color: "rgba(59,130,246,0.12)",
                   border: "rgba(59,130,246,0.2)",
                   key: "project2",
@@ -1220,7 +1220,7 @@ export default function Home() {
                 {
                   icon: "/chart-column-increasing.svg",
                   title: "Systems Optimization",
-                  desc: "I ensure existing systems run flawlessly — auditing, debugging, and scaling for peak performance.",
+                  desc: "I ensure existing systems run flawlessly ; auditing, debugging, and scaling for peak performance.",
                   color: "rgba(139,92,246,0.12)",
                   border: "rgba(139,92,246,0.2)",
                   key: "project3",
@@ -1421,10 +1421,10 @@ export default function Home() {
             <SectionTitle
               label="Documents"
               title="Download My Files"
-              subtitle="Get a copy of my CV and graduation certificate — fully up to date"
+              subtitle="Get a copy of my CV up to date"
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex justify-center">
               {/* CV Download */}
               <motion.a
                 href="/ALLAN_KIRIMI.pdf"
@@ -1435,7 +1435,7 @@ export default function Home() {
                 viewport={{once: true}}
                 whileHover={{y: -6, scale: 1.01}}
                 whileTap={{scale: 0.98}}
-                className="group block p-8 rounded-3xl text-left shimmer-btn cursor-pointer"
+                className="group block p-8 rounded-3xl text-left shimmer-btn cursor-pointer w-full max-w-md"
                 style={{
                   background:
                     "linear-gradient(135deg, rgba(132,204,22,0.1), rgba(34,197,94,0.06))",
@@ -1476,60 +1476,6 @@ export default function Home() {
                 <div className="flex items-center gap-2 text-green-400 text-sm font-semibold">
                   <LuDownload className="text-base" />
                   Download PDF
-                </div>
-              </motion.a>
-
-              {/* Certificate Download */}
-              <motion.a
-                href="/Allan___kirimi-Software_Development_Bootcamp_with_AI_skills_Certificate_of_Completion.pdf"
-                download="Allan_Kirimi_GoMyCode_Certificate.pdf"
-                initial={{opacity: 0, y: 30}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{duration: 0.5, delay: 0.1}}
-                viewport={{once: true}}
-                whileHover={{y: -6, scale: 1.01}}
-                whileTap={{scale: 0.98}}
-                className="group block p-8 rounded-3xl text-left shimmer-btn cursor-pointer"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(139,92,246,0.1), rgba(59,130,246,0.06))",
-                  border: "1px solid rgba(139,92,246,0.25)",
-                  backdropFilter: "blur(20px)",
-                  transition: "all 0.3s ease",
-                  boxShadow: "0 0 0 transparent",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.boxShadow =
-                    "0 20px 60px rgba(139,92,246,0.15)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.boxShadow = "0 0 0 transparent")
-                }
-              >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform"
-                  style={{
-                    background: "rgba(139,92,246,0.15)",
-                    border: "1px solid rgba(139,92,246,0.25)",
-                    color: "#a78bfa",
-                  }}
-                >
-                  <LuGraduationCap />
-                </div>
-                <h3
-                  className="text-xl font-black text-white mb-2"
-                  style={{fontFamily: "'Syne', sans-serif"}}
-                >
-                  Graduation Certificate
-                </h3>
-                <p className="text-gray-400 text-sm mb-5 leading-relaxed">
-                  GoMyCode Software Development Bootcamp with AI Skills — June
-                  2025.
-                </p>
-                <div className="flex items-center gap-2 text-purple-400 text-sm font-semibold">
-                  <LuDownload className="text-base" />
-                  Download Certificate
                 </div>
               </motion.a>
             </div>
@@ -1732,14 +1678,13 @@ export default function Home() {
                 viewport={{once: true}}
                 className="mt-8 text-gray-500 text-sm"
               >
-                📞{" "}
                 <a
                   href="tel:+254792624342"
                   className="hover:text-green-400 transition-colors"
                 >
                   (+254) 792 624 342
                 </a>{" "}
-                · ✉️{" "}
+                ||
                 <a
                   href="mailto:allankirimi65@gmail.com"
                   className="hover:text-green-400 transition-colors"
@@ -1774,8 +1719,10 @@ export default function Home() {
                 Follow me across all platforms
               </p>
 
-              {/* Social links preserved as-is */}
-              <Links />
+              {/* Added w-full to prevent flex shrinking */}
+              <div className="w-full">
+                <Links />
+              </div>
 
               <div
                 className="w-16 h-px"
