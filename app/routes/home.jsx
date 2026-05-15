@@ -317,7 +317,7 @@ export default function Home() {
     },
     {
       title: "MACISTA LIMITED",
-      image: "/Screenshot 2025-09-20 203520.png",
+      image: "public/macista.png",
       tags: ["REACT", "Javascript", "EXPRESS Js", ""],
       link: "https://www.macista.co.ke/",
       desc: "Full corporate website for a Kenyan enterprise",
@@ -328,6 +328,19 @@ export default function Home() {
       tags: ["HTML & CSS", "Javascript"],
       link: "https://tiktaktoe-game.onrender.com/",
       desc: "Classic tic-tac-toe browser game",
+    },
+    {
+      title: "Mindful Living KE",
+      image: "public/mindfulLiving.png",
+      tags: [
+        "REACT",
+        "TAILWINDCSS",
+        "FRAMER-MOTION",
+        "NODE JS WITH EXPRESS",
+        "PAYSTACK",
+      ],
+      link: "https://mindfullivingke.onrender.com",
+      desc: "A full stack e-commerce website for bf suma product distribution",
     },
   ];
 
@@ -1434,7 +1447,7 @@ export default function Home() {
             <div className="flex justify-center">
               {/* CV Download */}
               <motion.a
-                href="public/ALLAN KIRIMI.pdf"
+                href="/ALLAN KIRIMI.pdf"
                 download="Allan_Muriiithi_CV.pdf"
                 initial={{opacity: 0, y: 30}}
                 whileInView={{opacity: 1, y: 0}}
