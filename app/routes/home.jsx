@@ -479,12 +479,15 @@ function ProjectCard({project, index}) {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <motion.div
+      <motion.a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
         onHoverStart={() => setHovering(true)}
         onHoverEnd={() => setHovering(false)}
         whileHover={{y: -8}}
         transition={{type: "spring", stiffness: 300, damping: 20}}
-        className="group rounded-3xl overflow-hidden h-full flex flex-col relative"
+        className="group rounded-3xl overflow-hidden h-full flex flex-col relative cursor-pointer"
         style={{
           background: "rgba(17,24,39,0.9)",
           border: "1px solid rgba(255,255,255,0.07)",
@@ -493,9 +496,10 @@ function ProjectCard({project, index}) {
             ? "0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(132,204,22,0.08)"
             : "0 8px 30px rgba(0,0,0,0.3)",
           transition: "box-shadow 0.4s ease",
+          textDecoration: "none",
         }}
       >
-        {/* Image */}
+        {/* Image area - no separate anchor */}
         <div className="relative overflow-hidden" style={{height: 210}}>
           <motion.img
             animate={{scale: hovering ? 1.08 : 1}}
@@ -573,11 +577,8 @@ function ProjectCard({project, index}) {
             {project.desc}
           </p>
 
-          <motion.a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{x: 3}}
+          {/* Button now a span (or motion.div) for visual only */}
+          <div
             className="group/btn flex items-center justify-between w-full py-3 px-5 rounded-2xl text-sm font-bold"
             style={{
               background: "rgba(132,204,22,0.07)",
@@ -596,9 +597,9 @@ function ProjectCard({project, index}) {
           >
             View Live Project
             <LuArrowRight className="text-green-400 group-hover/btn:translate-x-1 transition-transform" />
-          </motion.a>
+          </div>
         </div>
-      </motion.div>
+      </motion.a>
     </motion.div>
   );
 }
@@ -2381,7 +2382,7 @@ export default function Home() {
               />
 
               <p className="text-gray-700 text-xs text-center">
-                Crafted with precision by Allan Muriiithi{" "}
+                Allan Muriiithi{" "}
                 <span className="text-green-400/60">© 2025</span>
               </p>
             </div>
