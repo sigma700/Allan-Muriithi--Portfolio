@@ -317,7 +317,7 @@ export default function Home() {
     },
     {
       title: "MACISTA LIMITED",
-      image: "public/macista.png",
+      image: "/macista.png",
       tags: ["REACT", "Javascript", "EXPRESS Js", ""],
       link: "https://www.macista.co.ke/",
       desc: "Full corporate website for a Kenyan enterprise",
@@ -331,7 +331,7 @@ export default function Home() {
     },
     {
       title: "Mindful Living KE",
-      image: "public/mindfulLiving.png",
+      image: "/mindfulLiving.png",
       tags: [
         "REACT",
         "TAILWINDCSS",
