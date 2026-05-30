@@ -691,14 +691,14 @@ export default function Home() {
     },
     {
       title: "BrewHaven",
-      image: "public/brew_haven.png",
+      image: "/brew_haven.png",
       tags: ["ReactJs", "TAILWIND CSS", "Framer-motion", "AWS", "Squoosh"],
       link: "https://brewhaven-qea1.onrender.com/",
       desc: "Coffee e-commerce platform with payment integration",
     },
     {
       title: "EduFind",
-      image: "public/edu_find.png",
+      image: "/edu_find.png",
       tags: ["REACT", "TAILWIND CSS", "Framer-motion", "NodeJs", "ExpressJs"],
       link: "https://edufind-ryn2.onrender.com/",
       desc: "Educational institution discovery platform",
