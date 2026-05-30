@@ -1216,28 +1216,6 @@ export default function Home() {
               transition={{duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1]}}
               className="text-center lg:text-left max-w-2xl"
             >
-              <motion.p
-                initial={{opacity: 0, y: 12}}
-                animate={{opacity: 1, y: 0}}
-                transition={{delay: 0.35}}
-                className="inline-flex items-center gap-2 text-green-400 text-xs font-bold tracking-[0.28em] uppercase mb-5 px-4 py-2 rounded-full"
-                style={{
-                  background: "rgba(132,204,22,0.06)",
-                  border: "1px solid rgba(132,204,22,0.2)",
-                }}
-              >
-                <span
-                  style={{
-                    width: 6,
-                    height: 6,
-                    borderRadius: "50%",
-                    background: "#84cc16",
-                    boxShadow: "0 0 10px #84cc16",
-                  }}
-                />
-                Welcome to my portfolio
-              </motion.p>
-
               <h1
                 className="text-5xl lg:text-7xl font-black mb-4 tracking-tight leading-[1.02]"
                 style={{fontFamily: "'Syne', sans-serif"}}
