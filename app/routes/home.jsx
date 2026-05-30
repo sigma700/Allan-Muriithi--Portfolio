@@ -1292,7 +1292,7 @@ export default function Home() {
                 transition={{delay: 0.9}}
                 className="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl"
               >
-                I design and build stunning, high-performance web applications —
+                I design and build stunning, high-performance web applications ,
                 transforming wireframes into clean, logical, and beautiful code
                 that drives real business outcomes.
               </motion.p>
@@ -2059,7 +2059,7 @@ export default function Home() {
                   role: "Founder, Kentech Solutions",
                   image: "/kevin.png",
                   quote:
-                    "Think about someone who does what he says — Allan is your guy. We worked with him on PROTIBA and I was shocked with the kind of seriousness he put in the work. Definitely someone to invest in.",
+                    "Think about someone who does what he says , Allan is your guy. We worked with him on PROTIBA and I was shocked with the kind of seriousness he put in the work. Definitely someone to invest in.",
                   rating: 5,
                 },
                 {
