@@ -1007,218 +1007,75 @@ export default function Home() {
             )}
           </AnimatePresence>
         </nav>
-
-        {/* ══ HERO ════════════════════════════════════════ */}
+        {/* HERO SECTION  */}
         <section
           id="home"
           ref={heroRef}
-          className="relative min-h-screen flex items-center pt-24 pb-20 px-6 lg:px-10 overflow-hidden"
+          className="relative min-h-screen flex overflow-hidden"
           style={{background: "#0a0f1a"}}
         >
-          {/* Background layers */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 90% 70% at 50% -10%, rgba(132,204,22,0.09) 0%, transparent 65%)",
-            }}
-          />
-          <div className="dot-grid" />
-
-          {/* Animated orbs */}
+          {/* ── LEFT PANEL: Text Content ── */}
           <motion.div
-            style={{y: heroY}}
-            className="hero-orb"
-            animate={{scale: [1, 1.1, 1], opacity: [0.5, 0.7, 0.5]}}
-            transition={{duration: 7, repeat: Infinity}}
-            styleProps={{
-              width: 600,
-              height: 600,
-              background: "rgba(132,204,22,0.07)",
-              top: "5%",
-              right: "-15%",
-            }}
-          />
-          <div
-            className="hero-orb"
-            style={{
-              width: 350,
-              height: 350,
-              background: "rgba(34,197,94,0.05)",
-              bottom: "5%",
-              left: "-8%",
-              animation: "floatSlow 8s ease-in-out infinite",
-            }}
-          />
-          <div
-            className="hero-orb"
-            style={{
-              width: 200,
-              height: 200,
-              background: "rgba(132,204,22,0.04)",
-              top: "40%",
-              left: "30%",
-              animation: "float 6s ease-in-out infinite 1s",
-            }}
-          />
-
-          {/* Subtle grid lines */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(132,204,22,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(132,204,22,0.025) 1px, transparent 1px)",
-              backgroundSize: "80px 80px",
-            }}
-          />
-
-          <motion.div
-            style={{y: heroY, opacity: heroOpacity}}
-            className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16 lg:gap-20 relative z-10"
+            style={{opacity: heroOpacity}}
+            className="relative z-10 flex flex-col justify-center px-8 lg:px-12 xl:px-16 2xl:px-20 pt-28 pb-20 w-full lg:w-1/2 flex-shrin-[2PX]"
           >
-            {/* Avatar column */}
-            <motion.div
-              initial={{opacity: 0, scale: 0.75, rotate: -6}}
-              animate={{opacity: 1, scale: 1, rotate: 0}}
-              transition={{duration: 1, ease: [0.34, 1.56, 0.64, 1]}}
-              className="relative flex-shrink-0"
-            >
-              {/* Outer spinning ring */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: -12,
-                  borderRadius: "50%",
-                  background:
-                    "conic-gradient(from 0deg, #84cc16 0%, #22c55e 30%, transparent 50%, transparent 70%, #84cc16 100%)",
-                  animation: "spin 10s linear infinite",
-                  filter: "blur(1px)",
-                  opacity: 0.5,
-                }}
-              />
-              {/* Inner counter-spin */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: -6,
-                  borderRadius: "50%",
-                  background:
-                    "conic-gradient(from 180deg, rgba(132,204,22,0.3) 0%, transparent 40%, rgba(34,197,94,0.2) 70%, transparent 100%)",
-                  animation: "spinR 14s linear infinite",
-                }}
-              />
+            {/* Subtle radial glow behind text */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 60% at 20% 50%, rgba(132,204,22,0.12) 0%, transparent 70%)",
+              }}
+            />
+            <div className="dot-grid" style={{opacity: 0.4}} />
 
-              {/* Avatar image */}
-              <div
-                className="relative"
-                style={{
-                  width: 288,
-                  height: 288,
-                  borderRadius: "50%",
-                  boxShadow:
-                    "0 0 0 3px #0a0f1a, 0 0 80px rgba(132,204,22,0.3), 0 0 160px rgba(132,204,22,0.1)",
-                }}
+            {/* Grid lines */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(132,204,22,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(132,204,22,0.03) 1px, transparent 1px)",
+                backgroundSize: "60px 60px",
+              }}
+            />
+
+            <div className="relative z-10 max-w-xl lg:max-w-full">
+              {/* Status badge */}
+              <motion.div
+                initial={{opacity: 0, x: -30}}
+                animate={{opacity: 1, x: 0}}
+                transition={{duration: 0.6, delay: 0.3}}
+                className="flex items-center gap-3 mb-10"
               >
-                <img
-                  className="w-full h-full rounded-full object-cover"
-                  style={{border: "3px solid rgba(132,204,22,0.2)"}}
-                  src="/Gemini_Generated_Image_iphrc7iphrc7iphr.png"
-                  alt="Allan"
-                />
-                {/* Inner glow overlay */}
                 <div
-                  className="absolute inset-0 rounded-full pointer-events-none"
-                  style={{boxShadow: "inset 0 0 40px rgba(132,204,22,0.08)"}}
-                />
-              </div>
-
-              {/* Floating badge — available */}
-              <motion.div
-                className="float-badge absolute -right-8 top-6 flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold"
-                initial={{opacity: 0, x: 20}}
-                animate={{opacity: 1, x: 0}}
-                transition={{delay: 0.8}}
-                style={{
-                  background: "rgba(132,204,22,0.1)",
-                  border: "1px solid rgba(132,204,22,0.3)",
-                  backdropFilter: "blur(16px)",
-                  color: "#84cc16",
-                  boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
-                }}
-              >
-                <span
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full"
                   style={{
-                    width: 7,
-                    height: 7,
-                    borderRadius: "50%",
-                    background: "#84cc16",
-                    boxShadow: "0 0 8px #84cc16",
-                    animation: "pulse-ring 2s ease-out infinite",
-                  }}
-                  className="relative flex-shrink-0"
-                />
-                Available for work
-              </motion.div>
-
-              {/* Floating badge — location */}
-              <motion.div
-                className="float-badge-slow absolute -left-6 bottom-8 flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-semibold"
-                initial={{opacity: 0, x: -20}}
-                animate={{opacity: 1, x: 0}}
-                transition={{delay: 1}}
-                style={{
-                  background: "rgba(10,15,26,0.85)",
-                  border: "1px solid rgba(255,255,255,0.09)",
-                  backdropFilter: "blur(16px)",
-                  color: "#d1d5db",
-                  boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
-                }}
-              >
-                <span style={{fontSize: "1rem"}}></span>
-                Nairobi, Kenya
-              </motion.div>
-
-              {/* Floating stat — projects */}
-              <motion.div
-                className="float-badge absolute -bottom-4 right-2 flex flex-col items-center px-4 py-2.5 rounded-2xl"
-                initial={{opacity: 0, y: 20}}
-                animate={{opacity: 1, y: 0}}
-                transition={{delay: 1.2}}
-                style={{
-                  background: "rgba(17,24,39,0.9)",
-                  border: "1px solid rgba(255,255,255,0.07)",
-                  backdropFilter: "blur(16px)",
-                  boxShadow: "0 8px 30px rgba(0,0,0,0.5)",
-                }}
-              >
-                <span
-                  className="text-xl font-black"
-                  style={{
-                    fontFamily: "'Syne',sans-serif",
-                    background: "linear-gradient(135deg, #bef264, #22c55e)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
+                    background: "rgba(132,204,22,0.08)",
+                    border: "1px solid rgba(132,204,22,0.15)",
+                    backdropFilter: "blur(8px)",
                   }}
                 >
-                  10+
-                </span>
-                <span className="text-xs text-gray-500 font-medium">
-                  Projects
-                </span>
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  <span
+                    className="text-xs font-medium tracking-wide"
+                    style={{color: "#84cc16"}}
+                  >
+                    Nairobi, Kenya
+                  </span>
+                </div>
               </motion.div>
-            </motion.div>
 
-            {/* Text column */}
-            <motion.div
-              initial={{opacity: 0, x: 40}}
-              animate={{opacity: 1, x: 0}}
-              transition={{duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1]}}
-              className="text-center lg:text-left max-w-2xl"
-            >
+              {/* Name with Nevera font - LARGER */}
               <h1
-                className="text-5xl lg:text-7xl font-black mb-4 tracking-tight leading-[1.02]"
-                style={{fontFamily: "'Syne', sans-serif"}}
+                className="font-black mb-6 tracking-tighter leading-[0.9]"
+                style={{
+                  fontFamily: "'Nevera', 'Syne', sans-serif",
+                  fontSize: "clamp(4rem, 8vw, 7rem)",
+                  fontWeight: 900,
+                }}
               >
                 {"I'm ".split("").map((char, i) => (
                   <motion.span
@@ -1237,15 +1094,28 @@ export default function Home() {
                   initial={{opacity: 0, y: 40}}
                   animate={{opacity: 1, y: 0}}
                   transition={{delay: 0.65, ease: [0.22, 1, 0.36, 1]}}
-                  className="gradient-text"
+                  className="gradient-text inline-block" // ← changed from "block" to "inline-block"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #bef264 0%, #84cc16 50%, #22c55e 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
                 >
                   Allan
                 </motion.span>
               </h1>
 
+              {/* Typewriter - LARGER with Nevera */}
               <div
-                className="text-2xl lg:text-3xl font-bold text-gray-300 mb-6 min-h-[2.5rem]"
-                style={{fontFamily: "'Syne', sans-serif"}}
+                className="font-bold mb-8"
+                style={{
+                  fontFamily: "'Nevera', 'Syne', sans-serif",
+                  fontSize: "clamp(1.3rem, 3vw, 2rem)",
+                  minHeight: "2.8rem",
+                  color: "#e5e7eb",
+                }}
               >
                 <TypeAnimation
                   sequence={[
@@ -1264,60 +1134,71 @@ export default function Home() {
                 />
               </div>
 
+              {/* Description - larger text */}
               <motion.p
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{delay: 0.9}}
-                className="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl"
+                className="text-gray-300 leading-relaxed mb-12"
+                style={{
+                  fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
+                  maxWidth: 500,
+                  lineHeight: 1.6,
+                }}
               >
-                I design and build stunning, high-performance web applications ,
+                I design and build stunning, high-performance web applications,
                 transforming wireframes into clean, logical, and beautiful code
                 that drives real business outcomes.
               </motion.p>
 
+              {/* CTAs - larger buttons */}
               <motion.div
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{delay: 1.1}}
-                className="flex flex-wrap gap-4 justify-center lg:justify-start"
+                className="flex flex-wrap gap-5 mb-12"
               >
                 <MagneticButton
                   href="https://wa.me/792624342?text=Hello%20I'm%20interested%20in%20your%20services"
                   target="_blank"
-                  className="group flex items-center gap-2 px-8 py-4 font-bold text-gray-900 rounded-2xl shimmer-btn cta-glow"
+                  className="group flex items-center gap-2 px-10 py-4 font-bold text-gray-900 rounded-2xl shimmer-btn cta-glow"
                   style={{
                     background:
                       "linear-gradient(135deg, #84cc16 0%, #22c55e 100%)",
+                    fontSize: "1rem",
+                    padding: "1rem 2rem",
                   }}
                 >
                   Let's Chat
-                  <span className="group-hover:translate-x-1 transition-transform inline-block">
+                  <span className="group-hover:translate-x-1 transition-transform inline-block text-lg">
                     →
                   </span>
                 </MagneticButton>
 
                 <MagneticButton
                   href="#projects"
-                  className="flex items-center gap-2 px-8 py-4 font-bold rounded-2xl"
+                  className="flex items-center gap-2 px-10 py-4 font-bold rounded-2xl"
                   style={{
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    color: "#d1d5db",
+                    border: "1px solid rgba(132,204,22,0.3)",
+                    color: "#e5e7eb",
                     background: "rgba(255,255,255,0.04)",
                     backdropFilter: "blur(10px)",
                     transition: "all 0.3s ease",
+                    fontSize: "1rem",
+                    padding: "1rem 2rem",
                   }}
                 >
                   View Work
-                  <LuArrowRight className="text-green-400 text-sm" />
+                  <LuArrowRight className="text-green-400 text-base" />
                 </MagneticButton>
               </motion.div>
 
-              {/* Social proof strip */}
+              {/* Social proof - enhanced */}
               <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 transition={{delay: 1.4}}
-                className="mt-10 flex items-center gap-4 justify-center lg:justify-start"
+                className="flex items-center gap-6"
               >
                 <div className="flex -space-x-2">
                   {[
@@ -1329,42 +1210,206 @@ export default function Home() {
                       key={i}
                       src={src}
                       alt=""
-                      className="w-8 h-8 rounded-full object-cover"
+                      className="w-10 h-10 rounded-full object-cover ring-2 ring-green-500/20"
                       style={{border: "2px solid #0a0f1a", zIndex: 3 - i}}
                     />
                   ))}
                 </div>
                 <div>
-                  <div className="flex gap-0.5 mb-0.5">
+                  <div className="flex gap-0.5 mb-1">
                     {[0, 1, 2, 3, 4].map((i) => (
-                      <span key={i} className="text-yellow-400 text-xs">
+                      <span key={i} className="text-yellow-400 text-sm">
                         ★
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-500 text-xs">5+ happy clients</p>
+                  <p className="text-gray-400 text-sm font-medium">
+                    15+ happy clients
+                  </p>
+                </div>
+
+                {/* Projects stat pill - larger */}
+                <div
+                  className="ml-2 flex flex-col items-center px-5 py-3 rounded-2xl"
+                  style={{
+                    background: "rgba(17,24,39,0.95)",
+                    border: "1px solid rgba(132,204,22,0.2)",
+                    backdropFilter: "blur(16px)",
+                  }}
+                >
+                  <span
+                    className="text-2xl font-black"
+                    style={{
+                      fontFamily: "'Nevera', 'Syne', sans-serif",
+                      background: "linear-gradient(135deg, #bef264, #22c55e)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    30+
+                  </span>
+                  <span className="text-xs text-gray-400 font-medium tracking-wide">
+                    Projects
+                  </span>
                 </div>
               </motion.div>
+            </div>
+
+            {/* Scroll indicator — bottom of left panel */}
+            <motion.div
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              transition={{delay: 1.8}}
+              className="absolute bottom-8 left-8 lg:left-12 xl:left-16 flex flex-col items-start gap-2"
+            >
+              <span className="text-gray-500 text-xs tracking-[0.3em] uppercase font-medium">
+                Scroll
+              </span>
+              <motion.div
+                animate={{y: [0, 12, 0]}}
+                transition={{duration: 1.6, repeat: Infinity}}
+                style={{
+                  width: 2,
+                  height: 60,
+                  background:
+                    "linear-gradient(to bottom, #84cc16, #22c55e, transparent)",
+                  borderRadius: "2px",
+                }}
+              />
             </motion.div>
           </motion.div>
 
-          {/* Scroll indicator */}
+          {/* ── RIGHT PANEL: Full-bleed Portrait Image with closer spacing ── */}
           <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{delay: 1.8}}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+            initial={{opacity: 0, x: 30}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
+            className="hidden lg:block relative w-[45%] xl:w-[48%] flex-shrink-0"
+            style={{minHeight: "100vh"}}
           >
-            <span className="text-gray-600 text-xs tracking-[0.25em] uppercase">
-              Scroll
-            </span>
-            <motion.div
-              animate={{y: [0, 10, 0]}}
-              transition={{duration: 1.6, repeat: Infinity}}
+            {/* The portrait image — full bleed, no border radius */}
+            <img
+              src="/my_pic.jpeg"
+              alt="Allan"
+              className="absolute inset-0 w-full h-full object-cover object-center lg:object-top"
+              style={{filter: "brightness(0.95) contrast(1.05)"}}
+            />
+
+            {/* Dark gradient fade on the left edge — stronger blend for closer spacing */}
+            <div
+              className="absolute inset-0 pointer-events-none"
               style={{
-                width: 1,
-                height: 48,
-                background: "linear-gradient(to bottom, #84cc16, transparent)",
+                background:
+                  "linear-gradient(to right, #0a0f1a 0%, #0a0f1a 5%, rgba(10,15,26,0.7) 20%, rgba(10,15,26,0.3) 45%, transparent 70%)",
+              }}
+            />
+
+            {/* Subtle dark vignette at top & bottom */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(10,15,26,0.5) 0%, transparent 15%, transparent 80%, rgba(10,15,26,0.8) 100%)",
+              }}
+            />
+
+            {/* Green tint overlay — ties image to the brand palette */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at 30% 50%, rgba(132,204,22,0.06), transparent)",
+                mixBlendMode: "overlay",
+              }}
+            />
+
+            {/* Decorative corner stat card — bottom left of image */}
+            <motion.div
+              initial={{opacity: 0, y: 20}}
+              animate={{opacity: 1, y: 0}}
+              transition={{delay: 1.2}}
+              className="absolute bottom-10 right-10 flex flex-col gap-2 z-10"
+            >
+              {/* Spinning ring accent — more premium */}
+              <div
+                className="absolute"
+                style={{
+                  width: 140,
+                  height: 140,
+                  borderRadius: "50%",
+                  background:
+                    "conic-gradient(from 0deg, rgba(132,204,22,0.5) 0deg, rgba(132,204,22,0.1) 90deg, transparent 180deg)",
+                  animation: "spin 12s linear infinite",
+                  top: -70,
+                  right: -70,
+                  filter: "blur(3px)",
+                  opacity: 0.4,
+                }}
+              />
+
+              {/* Premium rating badge */}
+              <div
+                className="px-6 py-4 rounded-2xl text-right"
+                style={{
+                  background: "rgba(10,15,26,0.9)",
+                  border: "1px solid rgba(132,204,22,0.3)",
+                  backdropFilter: "blur(20px)",
+                  boxShadow:
+                    "0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(132,204,22,0.1)",
+                }}
+              >
+                <div
+                  className="text-xs font-bold tracking-[0.2em] uppercase mb-1"
+                  style={{color: "#84cc16"}}
+                >
+                  Satisfaction
+                </div>
+                <div
+                  className="text-5xl font-black leading-none mb-1"
+                  style={{
+                    fontFamily: "'Nevera', 'Syne', sans-serif",
+                    background: "linear-gradient(135deg, #bef264, #22c55e)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  100%
+                </div>
+                <div className="text-gray-400 text-xs mt-1 tracking-wide">
+                  15+ clients
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Vertical text on far right edge — cinematic touch */}
+            <div
+              className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5 z-10"
+              style={{writingMode: "vertical-rl"}}
+            >
+              {["01", "02", "03", "04", "05"].map((n, i) => (
+                <span
+                  key={n}
+                  className="text-sm font-bold tracking-widest transition-all duration-300"
+                  style={{
+                    color: i === 1 ? "#84cc16" : "rgba(255,255,255,0.15)",
+                    textShadow:
+                      i === 1 ? "0 0 15px rgba(132,204,22,0.6)" : "none",
+                    letterSpacing: "0.2em",
+                  }}
+                >
+                  {n}
+                </span>
+              ))}
+            </div>
+
+            {/* Bottom right decor line */}
+            <div
+              className="absolute bottom-0 right-0 w-32 h-32 pointer-events-none z-10"
+              style={{
+                background:
+                  "linear-gradient(135deg, transparent 50%, rgba(132,204,22,0.1) 100%)",
               }}
             />
           </motion.div>
