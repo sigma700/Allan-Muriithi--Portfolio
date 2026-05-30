@@ -691,14 +691,14 @@ export default function Home() {
     },
     {
       title: "BrewHaven",
-      image: "/Screenshot 2025-10-22 223907.png",
+      image: "public/brew_haven.png",
       tags: ["ReactJs", "TAILWIND CSS", "Framer-motion", "AWS", "Squoosh"],
       link: "https://brewhaven-qea1.onrender.com/",
       desc: "Coffee e-commerce platform with payment integration",
     },
     {
       title: "EduFind",
-      image: "/Screenshot 2025-09-20 204543.png",
+      image: "public/edu_find.png",
       tags: ["REACT", "TAILWIND CSS", "Framer-motion", "NodeJs", "ExpressJs"],
       link: "https://edufind-ryn2.onrender.com/",
       desc: "Educational institution discovery platform",
@@ -710,13 +710,7 @@ export default function Home() {
       link: "https://www.macista.co.ke/",
       desc: "Full corporate website for a Kenyan enterprise",
     },
-    {
-      title: "TikTak Toe Game",
-      image: "/Screenshot 2025-09-20 203447.png",
-      tags: ["HTML & CSS", "Javascript"],
-      link: "https://tiktaktoe-game.onrender.com/",
-      desc: "Classic tic-tac-toe browser game",
-    },
+
     {
       title: "Mindful Living KE",
       image: "/mindfulLiving.png",
