@@ -710,6 +710,13 @@ export default function Home() {
       link: "https://www.macista.co.ke/",
       desc: "Full corporate website for a Kenyan enterprise",
     },
+    {
+      title: "JORDAN MORRIS' PORTFOLIO",
+      image: "/jordan_morris_portfolio.png",
+      tags: ["REACT", "Nextjs", "React-Forms"],
+      link: "https://jordanmorris.onrender.com/",
+      desc: "Professional portfolio website for a US based client done in 2 weeks .",
+    },
 
     {
       title: "Mindful Living KE",
